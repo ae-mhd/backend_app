@@ -10,7 +10,7 @@ import {
   verifyToken,
 } from "../controllers/auth.controller";
 import { verificationCheck } from "../middleware/auth.middleare";
-import { requestsLimiter } from "../utils/helper";
+import { requestsLimiter } from "../utils/helpers";
 import {
   forgotPasswordValidation,
   registerValidation,

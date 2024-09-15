@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from "express";
-import { sendEmail } from "./sendEmail";
+import { sendEmail } from "./helpers";
 import AppError from "./AppError";
 import User, { UserType } from "../models/user.model";
 import crypto from "crypto";
-import { generateToken } from "./helper";
+import { generateToken } from "./helpers";
 export type sendTokenResponseType<T = any> = {
   user: UserType;
   res: Response;

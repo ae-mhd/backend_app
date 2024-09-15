@@ -2,10 +2,8 @@ import { NextFunction, Request, Response } from "express";
 import User, { UserType } from "../models/user.model";
 import jwt from "jsonwebtoken";
 import AppError from "../utils/AppError";
-import { asyncHandler } from "../utils/asyncHandler";
-import { sendEmail } from "../utils/sendEmail";
 import { sendTokenResponse, sendVerificationOTP } from "../utils/authHelpers";
-import { generateToken } from "../utils/helper";
+import { asyncHandler, generateToken, sendEmail } from "../utils/helpers";
 
 export const register = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {

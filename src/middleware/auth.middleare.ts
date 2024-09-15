@@ -1,8 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
-import jwt from "jsonwebtoken";
 import AppError from "../utils/AppError";
-import { asyncHandler } from "../utils/asyncHandler";
 import User, { UserType } from "../models/user.model";
 import { sendVerificationOTP } from "../utils/authHelpers";
 
@@ -35,7 +33,7 @@ export const verificationCheck = async (
     req,
     res,
     next,
-    "Your account is not verified. OTP sent to your email.",
+    "Your account is not verified. Verification code has been sent, please check your email inbox.",
     401
   );
 };
